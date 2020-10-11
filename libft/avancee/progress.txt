@@ -1,0 +1,7 @@
+done:
+
+ft_putchar_fd;
+ft_strlen;
+ft_putnbr_fd;
+ft_putstr_fd;
+ft_atoi;
