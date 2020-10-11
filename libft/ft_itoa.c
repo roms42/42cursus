@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 15:56:59 by roms              #+#    #+#             */
-/*   Updated: 2020/10/11 17:04:25 by roms             ###   ########.fr       */
+/*   Updated: 2020/10/11 17:32:31 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,29 @@ int	ft_getlen(int nb)
 	return (i);
 }
 
+char	*ft_createstr(int nb, long *n, int *len, int *i)
+{
+	char *str;
+	if (nb < 0)
+	{
+		*len += 1;
+		str = malloc(sizeof(char) * *len + 1);
+		if (!str)
+			return (NULL);
+		str[*i] = '-';
+		*i += 1;
+		*n *= -1;
+	}
+	else
+	{
+		str = malloc(sizeof(char) * *len + 1);
+		if (!str)
+			return (NULL);
+	}
+	str[*len] = '\0';
+	return (str);
+}
+
 char	*ft_itoa(int nb)
 {
 	char *str;
@@ -39,23 +62,7 @@ char	*ft_itoa(int nb)
 	i = 0;
 	n = nb;
 	len = ft_getlen(nb);
-	if (nb < 0)
-	{
-		len += 1;
-		str = malloc(sizeof(char) * len + 1);
-		if (!str)
-			return (NULL);
-		str[i] = '-';
-		i++;
-		n = -n;
-	}
-	else
-	{
-		str = malloc(sizeof(char) * len + 1);
-		if (!str)
-			return (NULL);
-	}
-	str[len] = '\0';
+	str = ft_createstr(nb, &n, &len, &i);
 	while (i <= len - 1)
 	{
 		str[len - 1] = n % 10 + '0';
