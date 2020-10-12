@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/12 23:41:37 by roms              #+#    #+#             */
-/*   Updated: 2020/10/13 01:14:09 by roms             ###   ########.fr       */
+/*   Created: 2020/10/12 17:16:41 by roms              #+#    #+#             */
+/*   Updated: 2020/10/12 18:02:25 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+int	ft_isupper(int c)
 {
-	size_t i;
-	size_t srclen;
-
-	i = 0;
-	srclen = ft_strlen(src);
-	if (size == 0)
-		return (srclen);
-	while (src[i] && i < size - 1)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = 0;
-	return (srclen);
+	if (c >= 'A' && c <= 'Z')
+		return (256);
+	return (0);
 }
