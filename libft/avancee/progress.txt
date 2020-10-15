@@ -13,6 +13,9 @@ ft_tolower;
 ft_toupper;
 ft_strncmp
 ft_strlcpy
+ft_strchr
+ft_strrchr
+ft_strnstr;
 
 extra:
 ft_putchar_fd;
@@ -41,10 +44,6 @@ ft_memmove
 ft_memchr
 ft_memcmp
 
-ft_strchr
-ft_strrchr
-
 ft_calloc
 ft_strdup
 ft_strlcat
-ft_strnstr
