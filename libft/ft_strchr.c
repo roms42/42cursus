@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 14:25:24 by roms              #+#    #+#             */
-/*   Updated: 2020/10/15 15:50:45 by roms             ###   ########.fr       */
+/*   Updated: 2020/10/15 16:43:31 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strchr(const char *s, int c)
 {
 	if (!s)
 		s = NULL;
-	while (*s || *s == c)
+	while (*s && *s != c)
 		s++;
 	if (*s == 0 && c != 0)
 		s = NULL;
