@@ -6,9 +6,11 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 14:25:24 by roms              #+#    #+#             */
-/*   Updated: 2020/10/15 14:46:05 by roms             ###   ########.fr       */
+/*   Updated: 2020/10/15 15:50:45 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -18,5 +20,5 @@ char	*ft_strchr(const char *s, int c)
 		s++;
 	if (*s == 0 && c != 0)
 		s = NULL;
-	return (s);
+	return ((char*)(s));
 }

@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 14:47:35 by roms              #+#    #+#             */
-/*   Updated: 2020/10/15 15:07:34 by roms             ###   ########.fr       */
+/*   Updated: 2020/10/15 15:56:58 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,26 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	littlelen = ft_strlen(little);
 	if (!little)
-		return (big);
-	while (*big)
+		return ((char*)(big));
+	while (*big && len > 0)
 	{
 		i = 0;
-		while (big[i] == little[i] && little[i])
+		while (big[i] == little[i] && little[i] && len - i > 0)
 		{
 			if (i == littlelen - 1)
-				return (big);
+				return ((char*)(big));
 			i++;
 		}
 		if (i)
+		{
 			big += i;
+			len -= i;
+		}
 		else
+		{
 			big++;
+			len--;
+		}
 	}
 	return (NULL);
 }
