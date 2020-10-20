@@ -6,11 +6,11 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/20 20:03:29 by roms              #+#    #+#             */
-/*   Updated: 2020/10/20 20:10:53 by roms             ###   ########.fr       */
+/*   Updated: 2020/10/20 20:15:47 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libf.h"
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

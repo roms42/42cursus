@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 13:46:38 by roms              #+#    #+#             */
-/*   Updated: 2020/10/15 15:14:12 by roms             ###   ########.fr       */
+/*   Updated: 2020/10/20 20:16:37 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 char    *ft_strchr(const char *s, int c);
 char    *ft_strrchr(const char *s, int c);
 char    *ft_strnstr(const char *big, const char *little, size_t len);
+size_t  ft_strlcat(char *dst, const char *src, size_t size);
 
 #endif
