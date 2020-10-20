@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 14:47:35 by roms              #+#    #+#             */
-/*   Updated: 2020/10/20 19:12:46 by roms             ###   ########.fr       */
+/*   Updated: 2020/10/20 19:24:00 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	while (*big && len > 0)
 	{
 		i = ft_findneedle(big, little, len);
-		if (i == littlelen - 1)
+		if (i == littlelen)
 			return ((char*)(big));
 		if (i)
 		{
