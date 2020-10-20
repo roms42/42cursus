@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/20 20:30:57 by roms              #+#    #+#             */
-/*   Updated: 2020/10/20 20:47:05 by roms             ###   ########.fr       */
+/*   Updated: 2020/10/20 20:55:27 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	i = 0;
 	if (!nmemb || !size)
+		return (NULL);
+	tab = malloc(sizeof(*tab) * nmemb);
+	if (!tab)
 		return (NULL);
 	while (i < nmemb)
 	{
