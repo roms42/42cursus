@@ -20,6 +20,7 @@ SRCS		= ft_atoi.c \
 			ft_strrchr.c \
 			ft_tolower.c \
 			ft_toupper.c \
+			ft_strlcat.c \
 
 HEADERS		= libft.h
 
