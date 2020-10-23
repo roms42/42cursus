@@ -23,6 +23,7 @@ SRCS		= ft_atoi.c \
 			ft_strlcat.c \
 			ft_strdup.c \
 			ft_calloc.c \
+			ft_bzero.c \
 
 HEADERS		= libft.h
 
