@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 17:36:56 by roms              #+#    #+#             */
-/*   Updated: 2020/10/24 16:51:13 by roms             ###   ########.fr       */
+/*   Updated: 2020/10/24 17:20:49 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_isset(int c, char const *set)
 	i = 0;
 	while (set[i])
 	{
-		if (c == set[i])
+		if (c == set[i] || (c >= 9 && c <= 13) || c == 32)
 			return (1);
 		i++;
 	}
