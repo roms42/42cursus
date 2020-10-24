@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 17:36:56 by roms              #+#    #+#             */
-/*   Updated: 2020/10/23 18:33:38 by roms             ###   ########.fr       */
+/*   Updated: 2020/10/24 16:17:00 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,24 @@
 char	*ft_strrev(const char *s1)
 {
 	int i;
-	char temp;
+	int size;
+	int sizebis;
+	char *dst;
 
 	i = 0;
 	size = ft_strlen(s1);
-	while (i < size)
+	sizebis = size;
+	dst = malloc(sizeof(char) * (size + 1));
+	if (!dst)
+		return (NULL);
+	while (i < sizebis)
 	{
-		temp = s1[i];
-		s1[i] = s1[size];
-		s1[size] = temp;
+		dst[i] = s1[size];
 		i++;
 		size--;
 	}
-	return ((char)(s1));
+	dst[i] = 0;
+	return (dst);
 }
 
 int	ft_isset(int c, char const *set)
