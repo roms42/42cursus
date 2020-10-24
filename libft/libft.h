@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 13:46:38 by roms              #+#    #+#             */
-/*   Updated: 2020/10/23 15:51:52 by roms             ###   ########.fr       */
+/*   Updated: 2020/10/23 19:10:49 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,8 @@ size_t  ft_strlcat(char *dst, const char *src, size_t size);
 char    *ft_strdup(const char *s);
 void    *ft_calloc(size_t nmemb, size_t size);
 void    ft_bzero(void *s, size_t n);
+char    *ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_strjoin(char const *s1, char const *s2);
+char    *ft_strtrim(char const *s1, char const *set);
 
 #endif
