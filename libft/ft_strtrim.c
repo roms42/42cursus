@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 17:36:56 by roms              #+#    #+#             */
-/*   Updated: 2020/10/24 17:20:49 by roms             ###   ########.fr       */
+/*   Updated: 2020/10/24 17:56:09 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strrev(const char *s1)
 		return (NULL);
 	while (i < sizebis)
 	{
-		dst[i] = s1[size];
+		dst[i] = s1[size - 1];
 		i++;
 		size--;
 	}
@@ -42,7 +42,7 @@ int	ft_isset(int c, char const *set)
 	i = 0;
 	while (set[i])
 	{
-		if (c == set[i] || (c >= 9 && c <= 13) || c == 32)
+		if (c == set[i])
 			return (1);
 		i++;
 	}
@@ -53,18 +53,22 @@ size_t	ft_getlength(char const *s1, char const *set)
 {
 	char *temp;
 	size_t dstlen;
+	size_t slen;
 	size_t i;
 
 	i = 0;
+	slen = ft_strlen(s1);
 	temp = ft_strrev(s1);
 	while (ft_isset(s1[i], set))
 		i++;
+	if (i == slen)
+		return (0);
 	dstlen = -i;
 	i = 0;
 	while (ft_isset(temp[i], set))
 		i++;
 	dstlen -= i;
-	dstlen += ft_strlen(s1);
+	dstlen += slen;
 	return (dstlen);
 }
 
