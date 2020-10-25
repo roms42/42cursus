@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/24 17:58:46 by roms              #+#    #+#             */
-/*   Updated: 2020/10/24 18:06:52 by roms             ###   ########.fr       */
+/*   Updated: 2020/10/24 18:08:58 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		dst[i] = f((unsigned int)(i), s[i]);
 		i++;
 	}
+	dst[i] = 0;
+	return (dst);
 }
