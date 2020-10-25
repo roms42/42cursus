@@ -6,13 +6,13 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/25 22:29:42 by roms              #+#    #+#             */
-/*   Updated: 2020/10/25 22:39:59 by roms             ###   ########.fr       */
+/*   Updated: 2020/10/25 22:46:31 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_overlap(void *dest, const void *src, size_t n)
+int	ft_overlapp(void *dest, const void *src, size_t n)
 {
 	if (src > dest)
 	{
@@ -35,14 +35,14 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	i = 0;
 	if (!src && !dest)
 		return (NULL);
-	overlap = ft_overlap(dest, src, n);
+	overlap = ft_overlapp(dest, src, n);
 	if (overlap)
 		return (NULL);
 	while (i < n)
 	{
-		if (*(int*)(src + i) = c)
+		if (*(int*)(src + i) == c)
 			return (dest + i);
-		*(char*)(dest + i) = *(char*)(src + i);
+		*(unsigned char*)(dest + i) = *(unsigned char*)(src + i);
 		i++;
 	}
 	return (NULL);
