@@ -29,6 +29,7 @@ SRCS		= ft_atoi.c \
 			ft_strtrim.c \
 			ft_strmapi.c \
 			ft_memmove.c \
+			ft_memcpy.c \
 
 HEADERS		= libft.h
 

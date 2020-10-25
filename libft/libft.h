@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 13:46:38 by roms              #+#    #+#             */
-/*   Updated: 2020/10/25 21:08:14 by roms             ###   ########.fr       */
+/*   Updated: 2020/10/25 22:16:32 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ char    *ft_strjoin(char const *s1, char const *s2);
 char    *ft_strtrim(char const *s1, char const *set);
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void    *ft_memmove(void *dest, const void *src, size_t n);
+void *memcpy(void *dest, const void *src, size_t n);
 
 #endif
