@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/25 22:29:42 by roms              #+#    #+#             */
-/*   Updated: 2020/10/25 23:21:56 by roms             ###   ########.fr       */
+/*   Updated: 2020/10/26 01:05:05 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	while (i < n)
 	{
 		*(unsigned char*)(dest + i) = *(unsigned char*)(src + i);
-		if (*(int*)(src + i) == c)
+		if (*(unsigned char*)(src + i) == (unsigned char)c)
 			return (dest + i + 1);
 		i++;
 	}
