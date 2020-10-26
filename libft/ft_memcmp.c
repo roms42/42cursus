@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 00:44:17 by roms              #+#    #+#             */
-/*   Updated: 2020/10/26 00:53:43 by roms             ###   ########.fr       */
+/*   Updated: 2020/10/26 00:59:38 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (*(unsigned char*)(s1 + i) != *(unsigned char*)(s2 + i))
-			return ((unsigned char*)(s1 + i) - *(unsigned char*)(s2 + i));
+			return ((int)(unsigned char*)(s1 + i) - *(unsigned char*)(s2 + i));
 	}
 	return (0);
 }
