@@ -6,7 +6,7 @@
 /*   By: rberthau <rberthau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 15:15:53 by rberthau          #+#    #+#             */
-/*   Updated: 2020/11/04 15:40:16 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/04 17:15:39 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	{
 		while (*lst != NULL)
 		{
-			tmp = *lst->next;
+			tmp = (*lst)->next;
 			ft_lstdelone(*lst, del);
 			*lst = tmp;
 		}
