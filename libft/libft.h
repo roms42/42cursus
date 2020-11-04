@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 13:46:38 by roms              #+#    #+#             */
-/*   Updated: 2020/11/04 15:49:21 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/04 17:11:25 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+
+typedef struct	s_list
+{
+	void	*content;
+	struct	s_list *next;
+}				t_list;
 
 void	ft_putchar_fd(char c, int fd);
 size_t	ft_strlen(const char *s);
@@ -61,11 +67,5 @@ void	ft_lstadd_back(t_list **alst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
-
-typedef struct	s_list
-{
-	void	*content;
-	struct	s_list *next;
-}				t_list;
 
 #endif
