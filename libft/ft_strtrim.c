@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 17:36:56 by roms              #+#    #+#             */
-/*   Updated: 2020/10/24 17:56:09 by roms             ###   ########.fr       */
+/*   Updated: 2020/11/05 18:10:54 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ size_t	ft_getlength(char const *s1, char const *set)
 	i = 0;
 	slen = ft_strlen(s1);
 	temp = ft_strrev(s1);
+	if (temp == NULL)
+		return (0);
 	while (ft_isset(s1[i], set))
 		i++;
 	if (i == slen)
@@ -79,6 +81,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t i;
 
 	dstlen = ft_getlength(s1, set);
+	if (!dstlen)
+		return (NULL);
 	dst = malloc(sizeof(char) * (dstlen + 1));
 	if (!dst)
 		return (NULL);
