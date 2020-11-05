@@ -6,7 +6,7 @@
 /*   By: rberthau <rberthau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:53:02 by rberthau          #+#    #+#             */
-/*   Updated: 2020/11/05 16:40:34 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/05 17:00:47 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {
+	t_list *tmp;
+
+	tmp = *alst;
 	if (alst == NULL)
 		return;
 	if (*alst == NULL)
@@ -23,11 +26,11 @@ void	ft_lstadd_back(t_list **alst, t_list *new)
 	}
 	else
 	{
-		while (*alst != NULL)
+		while (tmp != NULL)
 		{
-			*alst = (*alst)->next;
+			tmp = tmp->next;
 		}
-		*alst = new;
-		(*alst)->next = NULL;
+		tmp = new;
+		tmp->next = NULL;
 	}
 }
