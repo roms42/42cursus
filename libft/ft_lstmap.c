@@ -6,7 +6,7 @@
 /*   By: rberthau <rberthau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 16:28:03 by rberthau          #+#    #+#             */
-/*   Updated: 2020/11/05 16:17:53 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/05 16:20:50 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	first = NULL;
 	while (lst != NULL)
 	{
-		new = ft_lstnew(*f)(lst->content);
+		new = ft_lstnew((*f)(lst->content));
 		if (new == NULL)
 		{
 			ft_lstclear(&first, del);
