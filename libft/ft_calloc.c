@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/20 20:30:57 by roms              #+#    #+#             */
-/*   Updated: 2020/10/23 15:44:49 by roms             ###   ########.fr       */
+/*   Updated: 2020/11/05 17:52:16 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		tab[i] = malloc(sizeof(**tab) * size);
 		if (!tab[i])
 			return (NULL);
+		ft_bzero(tab[i], size);
 		i++;
 	}
 	return (tab[i - i]);
