@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/20 20:22:52 by roms              #+#    #+#             */
-/*   Updated: 2020/10/20 20:27:58 by roms             ###   ########.fr       */
+/*   Updated: 2020/11/16 15:32:10 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strdup(const char *s)
 {
-	size_t slen;
-	char *dst;
-	size_t i;
+	size_t	slen;
+	char	*dst;
+	size_t	i;
 
 	i = 0;
 	slen = ft_strlen(s);

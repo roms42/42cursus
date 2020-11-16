@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 16:12:31 by roms              #+#    #+#             */
-/*   Updated: 2020/10/23 17:36:00 by roms             ###   ########.fr       */
+/*   Updated: 2020/11/16 15:10:33 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_getsize(char const *s1, char const *s2)
 {
-	size_t s1len;
-	size_t s2len;
-	size_t dstlen;
+	size_t	s1len;
+	size_t	s2len;
+	size_t	dstlen;
 
 	s1len = 0;
 	s2len = 0;
@@ -30,9 +30,9 @@ size_t	ft_getsize(char const *s1, char const *s2)
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *dst;
-	size_t dstlen;
-	size_t i;
+	char	*dst;
+	size_t	dstlen;
+	size_t	i;
 
 	i = 0;
 	dstlen = ft_getsize(s1, s2);

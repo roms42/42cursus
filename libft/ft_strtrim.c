@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 17:36:56 by roms              #+#    #+#             */
-/*   Updated: 2020/11/05 18:57:11 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/16 15:31:54 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *dst;
-	size_t dstlen;
-	size_t i;
+	char	*dst;
+	size_t	dstlen;
+	size_t	i;
 
 	i = 0;
 	if (!s1 || !set)

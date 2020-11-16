@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 00:44:17 by roms              #+#    #+#             */
-/*   Updated: 2020/10/26 01:18:38 by roms             ###   ########.fr       */
+/*   Updated: 2020/11/16 15:09:06 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t i;
-	int ret;
+	size_t	i;
+	int		ret;
 
 	i = 0;
 	ret = 0;

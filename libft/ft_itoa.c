@@ -6,16 +6,16 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 15:56:59 by roms              #+#    #+#             */
-/*   Updated: 2020/10/20 19:53:40 by roms             ###   ########.fr       */
+/*   Updated: 2020/11/16 15:33:48 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_getlen(int nb)
+int		ft_getlen(int nb)
 {
-	int	i;
-	long n;
+	int		i;
+	long	n;
 
 	i = 0;
 	n = nb;
@@ -34,6 +34,7 @@ int	ft_getlen(int nb)
 char	*ft_createstr(int nb, long *n, int *len, int *i)
 {
 	char *str;
+
 	if (nb < 0)
 	{
 		*len += 1;
@@ -56,10 +57,10 @@ char	*ft_createstr(int nb, long *n, int *len, int *i)
 
 char	*ft_itoa(int nb)
 {
-	char *str;
-	long n;
-	int len;
-	int i;
+	char	*str;
+	long	n;
+	int		len;
+	int		i;
 
 	i = 0;
 	n = nb;

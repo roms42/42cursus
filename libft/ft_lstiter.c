@@ -6,7 +6,7 @@
 /*   By: rberthau <rberthau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 15:42:32 by rberthau          #+#    #+#             */
-/*   Updated: 2020/11/04 15:47:05 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/16 15:09:31 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 
 	tmp = lst;
 	if (!f || !lst)
-		return;
+		return ;
 	while (tmp != NULL)
 	{
 		(*f)(tmp->content);

@@ -6,7 +6,7 @@
 /*   By: rberthau <rberthau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:53:02 by rberthau          #+#    #+#             */
-/*   Updated: 2020/11/05 17:44:55 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/16 15:08:32 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,18 @@ void	ft_lstadd_back(t_list **alst, t_list *new)
 
 	tmp = *alst;
 	if (!new)
-		return;
+		return ;
 	new->next = NULL;
 	if (alst == NULL)
-		return;
+		return ;
 	if (*alst == NULL)
 	{
 		*alst = new;
-		return;
+		return ;
 	}
 	else
 	{
-		tmp = ft_lstlast(*alst);;
+		tmp = ft_lstlast(*alst);
 		tmp->next = new;
 	}
 }

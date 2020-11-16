@@ -6,23 +6,23 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 17:51:02 by roms              #+#    #+#             */
-/*   Updated: 2020/10/12 21:00:59 by roms             ###   ########.fr       */
+/*   Updated: 2020/11/16 15:34:10 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_countwords(const char *s, char c)
+int		ft_countwords(const char *s, char c)
 {
-	int i;
-	int words;
+	int	i;
+	int	words;
 
 	words = 0;
 	while (*s)
 	{
 		i = 0;
 		while (*s == c && *s)
-				s++;
+			s++;
 		while (s[i] != c && s[i])
 			i++;
 		if (i)
@@ -32,7 +32,7 @@ int ft_countwords(const char *s, char c)
 	return (words);
 }
 
-int	ft_getwordlen(const char *s, char c)
+int		ft_getwordlen(const char *s, char c)
 {
 	int i;
 
@@ -44,10 +44,10 @@ int	ft_getwordlen(const char *s, char c)
 	return (i);
 }
 
-char *ft_assignword(const char *s, int wordlen)
+char	*ft_assignword(const char *s, int wordlen)
 {
-	int j;
-	char *dest;
+	int		j;
+	char	*dest;
 
 	j = 0;
 	dest = malloc(sizeof(char) * (wordlen + 1));
@@ -64,10 +64,10 @@ char *ft_assignword(const char *s, int wordlen)
 
 char	**ft_split(const char *s, char c)
 {
-	int words;
-	int wordlen;
-	char **tab;
-	int i;
+	int		words;
+	int		wordlen;
+	char	**tab;
+	int		i;
 
 	i = 0;
 	words = ft_countwords(s, c);
