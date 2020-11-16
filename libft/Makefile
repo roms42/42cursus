@@ -34,7 +34,8 @@ SRCS		= ft_atoi.c \
 			ft_memchr.c \
 			ft_memcmp.c \
 			ft_memset.c \
-			ft_lstnew.c \
+
+SRCS_BONUS		= ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
 			ft_lstlast.c \
@@ -49,6 +50,8 @@ HEADERS		= libft.h
 FOlDER		= ./srcs/
 
 OBJS		= ${SRCS:.c=.o}
+
+OBJS_BONUS	= ${SRCS_BONUS:.c=.o}
 
 NAME		= libft.a
 
@@ -65,10 +68,14 @@ ${NAME}:	${OBJS}
 			ar rc ${NAME} ${OBJS}
 			ranlib ${NAME}
 
+bonus:		${OBJS_BONUS}
+			ar rc ${NAME} ${OBJS_BONUS}
+			ranlib ${NAME}
+
 all:		${NAME}
 
 clean:
-			${RM} ${OBJS}
+			${RM} ${OBJS} ${OBJS_BONUS}
 
 fclean:		clean
 			${RM} ${NAME}
