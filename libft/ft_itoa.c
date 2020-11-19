@@ -6,22 +6,20 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 15:56:59 by roms              #+#    #+#             */
-/*   Updated: 2020/11/16 15:33:48 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/19 15:46:09 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_getlen(int nb)
+int		ft_getlen(long n)
 {
 	int		i;
-	long	n;
 
 	i = 0;
-	n = nb;
-	if (nb < 0)
+	if (n < 0)
 		n = -n;
-	if (nb == 0)
+	if (n == 0)
 		i += 1;
 	while (n > 0)
 	{
@@ -31,11 +29,11 @@ int		ft_getlen(int nb)
 	return (i);
 }
 
-char	*ft_createstr(int nb, long *n, int *len, int *i)
+char	*ft_createstr(long *n, int *len, int *i)
 {
 	char *str;
 
-	if (nb < 0)
+	if (*n < 0)
 	{
 		*len += 1;
 		str = malloc(sizeof(char) * (*len + 1));
@@ -51,7 +49,7 @@ char	*ft_createstr(int nb, long *n, int *len, int *i)
 		if (!str)
 			return (NULL);
 	}
-	str[*len] = '\0';
+	str[*len] = 0;
 	return (str);
 }
 
@@ -64,8 +62,8 @@ char	*ft_itoa(int nb)
 
 	i = 0;
 	n = nb;
-	len = ft_getlen(nb);
-	str = ft_createstr(nb, &n, &len, &i);
+	len = ft_getlen(n);
+	str = ft_createstr(&n, &len, &i);
 	while (i <= len - 1 && str != NULL)
 	{
 		str[len - 1] = n % 10 + '0';

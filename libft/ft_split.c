@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 17:51:02 by roms              #+#    #+#             */
-/*   Updated: 2020/11/19 12:29:35 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/19 15:19:14 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,19 @@ char	*ft_assignword(const char *s, int wordlen)
 	return (dest);
 }
 
+void	ft_freeall(char **tab, int *i)
+{
+	int j;
+
+	j = 0;
+	while (j < *i - 1)
+	{
+		free (tab[j]);
+		j++;
+	}
+	free (tab);
+}
+
 char	**ft_split(const char *s, char c)
 {
 	int		words;
@@ -80,8 +93,9 @@ char	**ft_split(const char *s, char c)
 		wordlen = ft_getwordlen(s, c);
 		while (*s && *s == c)
 			s++;
-		tab[i] = ft_assignword(s, wordlen);
-		i++;
+		tab[i++] = ft_assignword(s, wordlen);
+		if (tab[i - 1] == NULL)
+			ft_freeall(tab, &i);
 		s += wordlen;
 	}
 	tab[words] = 0;
