@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 13:46:38 by roms              #+#    #+#             */
-/*   Updated: 2020/11/19 14:38:36 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/19 16:41:12 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,13 @@ int				ft_toupper(int c);
 int				ft_tolower(int c);
 char			**ft_split(const char *s, char c);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
-size_t			ft_strlcpy(char * restrict dest, const char * restrict src,
+size_t			ft_strlcpy(char *restrict dest, const char *restrict src,
 		size_t dstsize);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strnstr(const char *haystack, const char *needle,
 		size_t len);
-size_t			ft_strlcat(char * restrict dst, const char * restrict src,
+size_t			ft_strlcat(char *restrict dst, const char *restrict src,
 		size_t dstsize);
 char			*ft_strdup(const char *s1);
 void			*ft_calloc(size_t count, size_t size);

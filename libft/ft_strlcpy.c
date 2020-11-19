@@ -6,13 +6,13 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 23:41:37 by roms              #+#    #+#             */
-/*   Updated: 2020/11/19 13:51:29 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/19 16:38:51 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
 	size_t i;
 	size_t srclen;

@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 17:51:02 by roms              #+#    #+#             */
-/*   Updated: 2020/11/19 15:19:14 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/19 16:40:31 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,10 +69,10 @@ void	ft_freeall(char **tab, int *i)
 	j = 0;
 	while (j < *i - 1)
 	{
-		free (tab[j]);
+		free(tab[j]);
 		j++;
 	}
-	free (tab);
+	free(tab);
 }
 
 char	**ft_split(const char *s, char c)
