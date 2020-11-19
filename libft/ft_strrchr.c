@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 14:30:49 by roms              #+#    #+#             */
-/*   Updated: 2020/11/16 14:28:33 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/19 13:43:17 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ char	*ft_strrchr(const char *s, int c)
 		s = NULL;
 	slen = ft_strlen(s);
 	s += slen;
-	while (*s != c && slen != 0)
+	while (*s != (char)c && slen != 0)
 	{
 		s--;
 		slen--;
 	}
-	if (slen == 0 && *s != c)
+	if (slen == 0 && *s != (char)c)
 		return (NULL);
 	return ((char*)(s));
 }

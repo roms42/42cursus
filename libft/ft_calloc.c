@@ -6,23 +6,23 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/20 20:30:57 by roms              #+#    #+#             */
-/*   Updated: 2020/11/05 18:06:27 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/19 14:37:01 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
 	void *tab;
 
-	if (size == 0)
+	if (!size)
 		size = 1;
-	if (!nmemb)
-		nmemb = 1;
-	tab = malloc(sizeof(*tab) * (nmemb * size));
+	if (!count)
+		count = 1;
+	tab = malloc(sizeof(*tab) * (count * size));
 	if (!tab)
 		return (NULL);
-	ft_bzero(tab, (nmemb * size));
+	ft_bzero(tab, (count * size));
 	return (tab);
 }

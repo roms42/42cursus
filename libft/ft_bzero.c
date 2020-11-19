@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 15:45:36 by roms              #+#    #+#             */
-/*   Updated: 2020/10/23 16:02:35 by roms             ###   ########.fr       */
+/*   Updated: 2020/11/19 12:57:30 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t i;
-
-	i = 0;
-	while (i < n)
-	{
-		*(char*)(s + i) = 0;
-		i++;
-	}
+	ft_memset(s, 0, n);
 }

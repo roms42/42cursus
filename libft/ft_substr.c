@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 16:05:08 by roms              #+#    #+#             */
-/*   Updated: 2020/11/16 15:31:18 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/19 14:44:00 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	if (!s)
-		return (0);
+		return (NULL);
 	slen = ft_strlen(s);
 	if (len > slen - start)
 		len = slen - start;

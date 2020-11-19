@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 14:47:35 by roms              #+#    #+#             */
-/*   Updated: 2020/10/20 19:24:00 by roms             ###   ########.fr       */
+/*   Updated: 2020/11/19 13:55:22 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,27 +22,27 @@ size_t	ft_findneedle(const char *big, const char *little, size_t len)
 	return (i);
 }
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t i;
 	size_t littlelen;
 
-	littlelen = ft_strlen(little);
-	if (!big && !little)
+	if (!haystack && !needle)
 		return (0);
-	if (*little == 0)
-		return ((char*)(big));
-	while (*big && len > 0)
+	littlelen = ft_strlen(needle);
+	if (*needle == 0)
+		return ((char*)(haystack));
+	while (*haystack && len > 0)
 	{
-		i = ft_findneedle(big, little, len);
+		i = ft_findneedle(haystack, needle, len);
 		if (i == littlelen)
-			return ((char*)(big));
+			return ((char*)(haystack));
 		if (i)
 		{
-			big += i - 1;
+			haystack += i - 1;
 			len -= i - 1;
 		}
-		big++;
+		haystack++;
 		len--;
 	}
 	return (NULL);

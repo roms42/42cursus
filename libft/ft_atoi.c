@@ -6,11 +6,11 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 13:24:30 by roms              #+#    #+#             */
-/*   Updated: 2020/11/16 15:32:39 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/19 13:57:25 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	k;
 	int	nb;
