@@ -34,7 +34,6 @@ SRCS		= ft_atoi.c \
 			ft_memchr.c \
 			ft_memcmp.c \
 			ft_memset.c \
-			ft_putnbr_base.c \
 
 SRCS_BONUS		= ft_lstnew.c \
 			ft_lstadd_front.c \
