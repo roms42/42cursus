@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/24 17:58:46 by roms              #+#    #+#             */
-/*   Updated: 2020/11/16 15:31:37 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/19 12:28:00 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	slen;
 	size_t	i;
 
+	if (!s || !f)
+		return (NULL);
 	i = 0;
 	slen = ft_strlen(s);
 	dst = malloc(sizeof(*s) * (slen + 1));

@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 23:41:37 by roms              #+#    #+#             */
-/*   Updated: 2020/11/05 19:22:01 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/19 12:31:33 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	size_t srclen;
 
 	i = 0;
+	if (!dest || !src)
+		return (0);
 	srclen = ft_strlen(src);
 	if (size == 0)
 		return (srclen);

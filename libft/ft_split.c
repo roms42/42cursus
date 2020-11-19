@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 17:51:02 by roms              #+#    #+#             */
-/*   Updated: 2020/11/16 15:34:10 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/19 12:29:35 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,10 +69,11 @@ char	**ft_split(const char *s, char c)
 	char	**tab;
 	int		i;
 
+	if (!s || !c)
+		return (NULL);
 	i = 0;
 	words = ft_countwords(s, c);
-	tab = malloc(sizeof(s) * (words + 1));
-	if (!tab)
+	if (!(tab = malloc(sizeof(s) * (words + 1))))
 		return (NULL);
 	while (*s)
 	{

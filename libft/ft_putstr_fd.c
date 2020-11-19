@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 13:44:20 by roms              #+#    #+#             */
-/*   Updated: 2020/10/11 14:49:08 by roms             ###   ########.fr       */
+/*   Updated: 2020/11/19 12:25:15 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (!s || !fd)
+		return ;
 	write(fd, s, ft_strlen(s));
 }

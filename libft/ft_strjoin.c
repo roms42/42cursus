@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 16:12:31 by roms              #+#    #+#             */
-/*   Updated: 2020/11/16 15:10:33 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/11/19 12:30:26 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 
 	i = 0;
+	if (!s1 || !s2)
+		return (NULL);
 	dstlen = ft_getsize(s1, s2);
-	dst = malloc(sizeof(char) * (dstlen + 1));
-	if (!dst)
+	if (!(dst = malloc(sizeof(char) * (dstlen + 1))))
 		return (NULL);
 	while (*s1)
 	{
