@@ -35,7 +35,7 @@ SRCS		= ft_atoi.c \
 			ft_memcmp.c \
 			ft_memset.c \
 
-SRCS_BONUS		= ft_lstnew.c \
+SRCS_BONUS	= ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
 			ft_lstlast.c \
@@ -68,8 +68,8 @@ $(NAME):	${OBJS}
 			ar rc ${NAME} ${OBJS}
 			ranlib ${NAME}
 
-bonus:		${OBJS_BONUS}
-			ar rc ${NAME} ${OBJS_BONUS}
+bonus:		${OBJS} ${OBJS_BONUS}
+			ar rc ${NAME} ${OBJS} ${OBJS_BONUS}
 			ranlib ${NAME}
 
 all:		${NAME}
