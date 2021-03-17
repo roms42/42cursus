@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 17:51:02 by roms              #+#    #+#             */
-/*   Updated: 2020/11/19 16:40:31 by rberthau         ###   ########.fr       */
+/*   Updated: 2021/03/17 16:49:27 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ char	**ft_split(const char *s, char c)
 	char	**tab;
 	int		i;
 
-	if (!s || !c)
+	if (!s)
 		return (NULL);
 	i = 0;
 	words = ft_countwords(s, c);
