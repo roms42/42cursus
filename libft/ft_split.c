@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 17:51:02 by roms              #+#    #+#             */
-/*   Updated: 2021/03/17 16:49:27 by roms             ###   ########.fr       */
+/*   Updated: 2021/03/21 00:19:47 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,16 +44,17 @@ int		ft_getwordlen(const char *s, char c)
 	return (i);
 }
 
-char	*ft_assignword(const char *s, int wordlen)
+char	*ft_assignword(const char *s, int *wordlen, char c)
 {
 	int		j;
 	char	*dest;
 
 	j = 0;
-	dest = malloc(sizeof(char) * (wordlen + 1));
+	*wordlen = ft_getwordlen(s, c);
+	dest = malloc(sizeof(char) * (*wordlen + 1));
 	if (!dest)
 		return (NULL);
-	while (j < wordlen)
+	while (j < *wordlen)
 	{
 		dest[j] = s[j];
 		j++;
@@ -62,7 +63,7 @@ char	*ft_assignword(const char *s, int wordlen)
 	return (dest);
 }
 
-void	ft_freeall(char **tab, int *i)
+void	*ft_freeall(char **tab, int *i)
 {
 	int j;
 
@@ -73,6 +74,7 @@ void	ft_freeall(char **tab, int *i)
 		j++;
 	}
 	free(tab);
+	return (NULL);
 }
 
 char	**ft_split(const char *s, char c)
@@ -88,14 +90,13 @@ char	**ft_split(const char *s, char c)
 	words = ft_countwords(s, c);
 	if (!(tab = malloc(sizeof(s) * (words + 1))))
 		return (NULL);
-	while (*s)
+	while (*s && i < words)
 	{
-		wordlen = ft_getwordlen(s, c);
 		while (*s && *s == c)
 			s++;
-		tab[i++] = ft_assignword(s, wordlen);
+		tab[i++] = ft_assignword(s, &wordlen, c);
 		if (tab[i - 1] == NULL)
-			ft_freeall(tab, &i);
+			return (ft_freeall(tab, &i));
 		s += wordlen;
 	}
 	tab[words] = 0;

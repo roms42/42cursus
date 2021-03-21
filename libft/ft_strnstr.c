@@ -6,7 +6,7 @@
 /*   By: roms <romain.berthaud812@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 14:47:35 by roms              #+#    #+#             */
-/*   Updated: 2020/11/19 13:55:22 by rberthau         ###   ########.fr       */
+/*   Updated: 2021/03/21 01:22:32 by roms             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		i = ft_findneedle(haystack, needle, len);
 		if (i == littlelen)
 			return ((char*)(haystack));
-		if (i)
-		{
-			haystack += i - 1;
-			len -= i - 1;
-		}
 		haystack++;
 		len--;
 	}
